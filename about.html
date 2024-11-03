@@ -50,12 +50,12 @@
         .logo-container {
             text-align: center;
             margin-top: 100px;
+            opacity: 1; /* Initial opacity */
             transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for logo */
         }
-        .image-placeholder {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
+        .logo-container.hide-logo {
+            opacity: 0; /* Fade out when scrolled down */
+            transform: translateY(-30px); /* Optional: add a slight upward motion */
         }
         .content {
             padding: 20px;
@@ -113,9 +113,11 @@
             if (scrollTop > lastScrollTop) {
                 // Scroll Down
                 navbar.classList.add("shrink"); // Add class to shrink navbar
+                logoContainer.classList.add("hide-logo"); // Fade out logo
             } else {
                 // Scroll Up
                 navbar.classList.remove("shrink"); // Remove class to restore navbar
+                logoContainer.classList.remove("hide-logo"); // Fade in logo
             }
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
         });
