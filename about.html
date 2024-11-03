@@ -3,10 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - My Minimal Techno Soundscape</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>About - Exploring Techno</title>
+
+    <!-- Favicon Links for Various Devices -->
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chromew.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="android-chrome.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+    <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+
     <style>
+        /* Main Page Styling */
         body {
             font-family: Arial, sans-serif;
             background-color: #121212;
@@ -24,30 +38,16 @@
             z-index: 1000;
             transition: all 0.3s ease;
         }
-        .navbar.shrink {
-            padding: 5px; /* Reduced padding */
-            background-color: #121212;
-        }
         .navbar a {
-            color: #00ffcc;
+            color: #ffffff;
             text-decoration: none;
             padding: 10px;
             font-weight: bold;
-            font-family: 'Orbitron', sans-serif;
-            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
         }
         .logo-container {
             text-align: center;
             margin-top: 100px;
-            animation: logoAnimation 2s infinite alternate;
-        }
-        @keyframes logoAnimation {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
+            transition: opacity 0.3s ease; /* Smooth transition for logo */
         }
         .image-placeholder {
             border-radius: 50%;
@@ -71,13 +71,17 @@
             padding: 20px;
             text-align: center;
         }
+        .footer-legal {
+            font-size: 10px;
+            color: #cccccc;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="navbar" id="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <!-- Other links -->
+        <a href="index.html" style="font-family: 'Orbitron', sans-serif; font-size: 1em; color: #00ffcc; text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);">Home</a>
+        <a href="about.html" style="font-family: 'Orbitron', sans-serif; font-size: 1em; color: #00ffcc; text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);">About</a>
     </div>
 
     <div class="logo-container" id="logoContainer">
@@ -90,17 +94,30 @@
     </div>
 
     <footer>
-        <p class="footer-legal"><a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a></p>
+        <p class="footer-legal">
+            <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
+        </p>
     </footer>
 
+    <script src="script.js"></script>
     <script>
+        // Shrink navbar and hide logo on scroll
+        let lastScrollTop = 0;
         window.onscroll = function() {
             const navbar = document.getElementById('navbar');
-            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+            const logoContainer = document.getElementById('logoContainer');
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            // Shrink navbar
+            if (currentScrollTop > 50) {
                 navbar.classList.add('shrink');
+                logoContainer.style.opacity = '0'; // Hide logo
             } else {
                 navbar.classList.remove('shrink');
+                logoContainer.style.opacity = '1'; // Show logo
             }
+
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // For Mobile or negative scrolling
         };
     </script>
 </body>
