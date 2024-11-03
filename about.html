@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - My Minimal Techno Soundscape</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        .navbar {
+            background-color: #1a1a1a;
+            padding: 15px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease; /* Smooth transition for navbar */
+        }
+        .navbar.shrink {
+            padding: 5px; /* Reduced padding when shrunk */
+            background-color: #121212; /* Optional: change background color when shrunk */
+        }
+        .navbar a {
+            color: #00ffcc; /* Matching color */
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+            font-family: 'Orbitron', sans-serif; /* Matching font */
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8); /* Glowing effect */
+        }
+        .logo-container {
+            text-align: center;
+            margin-top: 100px;
+            animation: logoAnimation 2s infinite alternate; /* Animation for logo */
+        }
+        @keyframes logoAnimation {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.1); /* Slightly enlarge */
+            }
+        }
+        .image-placeholder {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            margin-top: 20px;
+        }
+        h1 {
+            font-family: 'Orbitron', sans-serif; /* Use the new font */
+            font-size: 4em; /* Adjust the font size */
+            color: #00ffcc; /* Change the color for a futuristic look */
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8); /* Add a glowing effect */
+            margin: 0; /* Remove default margins */
+        }
+        footer {
+            margin-top: 50px;
+            padding: 20px;
+            text-align: center;
+        }
+        .soundcloud-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center align the embeds */
+            padding: 20px 0;
+        }
+        .soundcloud-embed {
+            width: 80%; /* Set a fixed width to make it longer */
+            max-width: 800px; /* Max width for larger screens */
+            margin: 20px auto; /* Center align the embeds */
+        }
+        iframe {
+            width: 100%; /* Responsive width to fill the embed */
+            height: 166px; /* Adjust height based on SoundCloud's standard */
+            border: none; /* Remove default border */
+        }
+        .music-card img {
+            width: 277px; /* Adjust thumbnail size here */
+            height: auto; /* Maintain aspect ratio */
+        }
+        .footer-legal {
+            font-size: 10px; /* Small font size */
+            color: #cccccc; /* Text color */
+            margin-top: 10px; /* Spacing above the link */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <!-- Other links -->
+    </div>
+
+    <div class="logo-container" id="logoContainer">
+        <img src="PXL_20230731_102745881.jpg" alt="Logo" class="image-placeholder" />
+    </div>
+
+    <div class="content">
+        <h1>About Me</h1>
+        <p>WIP</p> <!-- Placeholder text -->
+    </div>
+
+    <footer>
+        <p class="footer-legal"><a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a></p>
+    </footer>
+
+    <script>
+        // Shrink navbar on scroll
+        window.onscroll = function() {
+            const navbar = document.getElementById('navbar');
+            if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                navbar.classList.add('shrink');
+            } else {
+                navbar.classList.remove('shrink');
+            }
+        };
+    </script>
+</body>
+</html>
