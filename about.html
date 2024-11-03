@@ -31,18 +31,21 @@
         }
         .navbar {
             background-color: #1a1a1a;
-            padding: 15px;
+            padding: 15px; /* Initial padding */
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for navbar */
+            transition: transform 0.3s ease, opacity 0.3s ease, padding 0.3s ease; /* Add padding transition */
         }
         .navbar a {
             color: #ffffff;
             text-decoration: none;
             padding: 10px;
             font-weight: bold;
+        }
+        .navbar.shrink {
+            padding: 5px; /* Reduced padding for the shrunk state */
         }
         .logo-container {
             text-align: center;
@@ -118,10 +121,12 @@
             if (scrollTop > lastScrollTop) {
                 // Scroll Down
                 navbar.classList.add("navbar-hidden");
+                navbar.classList.add("shrink"); // Add class to shrink navbar
                 logoContainer.classList.add("hide-logo");
             } else {
                 // Scroll Up
                 navbar.classList.remove("navbar-hidden");
+                navbar.classList.remove("shrink"); // Remove class to restore navbar
                 logoContainer.classList.remove("hide-logo");
             }
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
