@@ -47,7 +47,7 @@
         .logo-container {
             text-align: center;
             margin-top: 100px;
-            transition: opacity 0.3s ease; /* Smooth transition for logo */
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for logo */
         }
         .image-placeholder {
             border-radius: 50%;
@@ -73,6 +73,7 @@
         }
         .hide-logo {
             opacity: 0; /* Hides logo */
+            transform: translateY(-50px); /* Move logo up slightly */
         }
         .navbar-hidden {
             transform: translateY(-100%); /* Slide navbar up */
@@ -123,7 +124,7 @@
                 navbar.classList.remove("navbar-hidden");
                 logoContainer.classList.remove("hide-logo");
             }
-            lastScrollTop = scrollTop;
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
         });
     </script>
 </body>
