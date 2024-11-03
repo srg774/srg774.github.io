@@ -36,7 +36,7 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth transition for navbar */
         }
         .navbar a {
             color: #ffffff;
@@ -73,6 +73,10 @@
         }
         .hide-logo {
             opacity: 0; /* Hides logo */
+        }
+        .navbar-hidden {
+            transform: translateY(-100%); /* Slide navbar up */
+            opacity: 0; /* Hide navbar */
         }
         .footer-legal {
             font-size: 10px;
@@ -112,11 +116,11 @@
 
             if (scrollTop > lastScrollTop) {
                 // Scroll Down
-                navbar.classList.add("shrink");
+                navbar.classList.add("navbar-hidden");
                 logoContainer.classList.add("hide-logo");
             } else {
                 // Scroll Up
-                navbar.classList.remove("shrink");
+                navbar.classList.remove("navbar-hidden");
                 logoContainer.classList.remove("hide-logo");
             }
             lastScrollTop = scrollTop;
