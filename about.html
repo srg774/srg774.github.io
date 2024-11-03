@@ -90,12 +90,22 @@
         <img src="PXL_20230731_102745881.jpg" alt="Logo" class="image-placeholder" />
   
     </div>
-<div class="post">
+<div class="post" style="text-align: center; margin: 20px auto; max-width: 600px; background-color: #1e1e1e; padding: 15px; border-radius: 5px;">
     <h2 style="color: #00ffcc;">Post Title Here</h2>
     <p class="post-date" style="color: #cccccc; font-size: 0.9em;" id="postDate"></p>
+    
+    <img src="assets/PXL_20241031_170435679.jpg" alt="Description of image" style="max-width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
+    
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet ligula ut lorem dictum dictum.</p>
     <p>Aliquam erat volutpat. Sed ac lorem libero. Nunc eget gravida massa. Sed tristique tortor nec sapien tempor faucibus.</p>
 </div>
+
+<script>
+    // Automatically set the date for the post
+    const today = new Date().toLocaleDateString();
+    document.getElementById('postDate').textContent = today;
+</script>
+
 
 <script>
     // Automatically set the date for the post
