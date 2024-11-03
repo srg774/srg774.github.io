@@ -88,8 +88,22 @@
 
     <div class="logo-container" id="logoContainer">
         <img src="PXL_20230731_102745881.jpg" alt="Logo" class="image-placeholder" />
+  
     </div>
+<div class="post">
+    <h2 style="color: #00ffcc;">Post Title Here</h2>
+    <p class="post-date" style="color: #cccccc; font-size: 0.9em;" id="postDate"></p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sit amet ligula ut lorem dictum dictum.</p>
+    <p>Aliquam erat volutpat. Sed ac lorem libero. Nunc eget gravida massa. Sed tristique tortor nec sapien tempor faucibus.</p>
+</div>
 
+<script>
+    // Automatically set the date for the post
+    const today = new Date().toLocaleDateString();
+    document.getElementById('postDate').textContent = today;
+</script>
+
+    
     <footer>
         <p class="footer-legal">
             <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
