@@ -79,6 +79,16 @@
             color: #cccccc;
             margin-top: 10px;
         }
+        /* Post Styling */
+        #postsContainer article {
+            margin: 20px 0;
+            padding: 15px;
+            background-color: #222;
+            border-radius: 5px;
+        }
+        #postsContainer h4 {
+            color: #00ffcc;
+        }
     </style>
 </head>
 <body>
@@ -88,6 +98,14 @@
 
     <div class="logo-container" id="logoContainer">
         <img src="PXL_20230731_102745881.jpg" alt="Logo" class="image-placeholder" />
+    </div>
+
+    <div class="content" id="aboutContent">
+        <h1>About Me</h1>
+        <p>Welcome to my website! Here you can find my thoughts on techno music and my musical journey.</p>
+        
+        <h3>Latest Posts</h3>
+        <div id="postsContainer"></div>
     </div>
 
     <footer>
@@ -114,6 +132,21 @@
                 logoContainer.classList.remove("hide-logo"); // Fade in logo
             }
             lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+        });
+
+        // Fetch and load posts
+        const posts = ['post1.html', 'post2.html']; // Array of post filenames
+        const postsContainer = document.getElementById('postsContainer');
+
+        posts.forEach(post => {
+            fetch(post)
+                .then(response => response.text())
+                .then(data => {
+                    const postElement = document.createElement('div');
+                    postElement.innerHTML = data; // Load the HTML content
+                    postsContainer.appendChild(postElement); // Append to the posts container
+                })
+                .catch(error => console.error('Error loading post:', error));
         });
     </script>
 </body>
