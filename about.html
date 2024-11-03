@@ -71,6 +71,9 @@
             padding: 20px;
             text-align: center;
         }
+        .hide-logo {
+            opacity: 0; /* Hides logo */
+        }
         .footer-legal {
             font-size: 10px;
             color: #cccccc;
@@ -99,36 +102,25 @@
         </p>
     </footer>
 
-    <script src="script.js"></script>
-    
-To create a smoother and more gradual fade effect for the logo as you scroll up, you can modify the opacity of the logo based on the scroll position. Instead of just switching the opacity between 0 and 1, you can calculate a dynamic opacity value based on how far you've scrolled. This will allow for a more gentle fading effect.
+    <script>
+        let lastScrollTop = 0;
+        const navbar = document.getElementById("navbar");
+        const logoContainer = document.getElementById("logoContainer");
 
-Here's how you can adjust the JavaScript in your "About" page to achieve that:
+        window.addEventListener("scroll", function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-Updated JavaScript for Smoother Fade Effect
-Replace the existing script at the bottom of your "About" page HTML with this updated script:
-
-html
-Copy code
-<script>
-    // Smoothly fade logo and adjust navbar on scroll
-    window.onscroll = function() {
-        const navbar = document.getElementById('navbar');
-        const logoContainer = document.getElementById('logoContainer');
-        const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-        // Adjust navbar
-        if (currentScrollTop > 50) {
-            navbar.classList.add('shrink');
-        } else {
-            navbar.classList.remove('shrink');
-        }
-
-        // Calculate logo opacity based on scroll position
-        const maxScroll = 150; // Maximum scroll before logo is fully transparent
-        const opacityValue = Math.max(0, 1 - currentScrollTop / maxScroll);
-        logoContainer.style.opacity = opacityValue; // Set logo opacity
-    };
-</script>
+            if (scrollTop > lastScrollTop) {
+                // Scroll Down
+                navbar.classList.add("shrink");
+                logoContainer.classList.add("hide-logo");
+            } else {
+                // Scroll Up
+                navbar.classList.remove("shrink");
+                logoContainer.classList.remove("hide-logo");
+            }
+            lastScrollTop = scrollTop;
+        });
+    </script>
 </body>
 </html>
