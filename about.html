@@ -79,11 +79,6 @@
             color: #cccccc;
             margin-top: 10px;
         }
-        .upload-form {
-            margin-top: 20px;
-            text-align: center;
-            display: none; /* Initially hide the upload form */
-        }
     </style>
 </head>
 <body>
@@ -95,19 +90,6 @@
         <img src="PXL_20230731_102745881.jpg" alt="Logo" class="image-placeholder" />
     </div>
 
-    <div class="content">
-        <h1>About Us</h1>
-        <p>Welcome to Exploring Techno. We are passionate about technology and its impact on our lives.</p>
-
-        <!-- File Upload Form -->
-        <div class="upload-form" id="uploadForm">
-            <form action="upload.php" method="post" enctype="multipart/form-data">
-                <label for="fileUpload" style="color: #00ffcc; font-weight: bold;">Upload your post:</label><br>
-                <input type="file" name="fileUpload" id="fileUpload" accept=".txt,.pdf,.doc,.docx" required>
-            </form>
-        </div>
-    </div>
-
     <footer>
         <p class="footer-legal">
             <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
@@ -115,19 +97,6 @@
     </footer>
 
     <script>
-        // Simulated condition to display the upload form
-        function checkForCondition() {
-            // Example condition: Replace this with actual logic to check for the right format
-            let conditionMet = true; // Change this based on your logic
-
-            if (conditionMet) {
-                document.getElementById("uploadForm").style.display = "block"; // Show upload form
-            }
-        }
-
-        // Call the check function on page load
-        window.onload = checkForCondition;
-
         let lastScrollTop = 0;
         const navbar = document.getElementById("navbar");
         const logoContainer = document.getElementById("logoContainer");
