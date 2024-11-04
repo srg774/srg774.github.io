@@ -192,20 +192,23 @@
     <span class="heart"></span>
     Currently listening to:
 </h4>
-<a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" 
+
+    <a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" 
    target="_blank" class="music-card" style="display: flex; justify-content: center; align-items: center; position: relative; cursor: pointer; text-decoration: none;">
 
-    <!-- Normal Image (Cat with Headphones) -->
-    <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" 
-         alt="Techno Vibes Playlist Thumbnail" 
-         class="normal-image"
-         style="width: 100%; max-width: 277px; height: auto; display: block; transition: opacity 0.5s ease;">
+    <div class="image-container" style="position: relative; width: 100%; max-width: 277px;">
+        <!-- Normal Image (Cat with Headphones) -->
+        <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" 
+             alt="Techno Vibes Playlist Thumbnail" 
+             class="normal-image"
+             style="width: 100%; height: auto; position: absolute; top: 0; left: 0; transition: opacity 0.5s ease;">
 
-    <!-- Hover Image (Winking Cat) -->
-    <img src="assets/craiyon_182412_shows_cat_winking.png" 
-         alt="Winking Cat" 
-         class="hover-image"
-         style="width: 100%; max-width: 277px; height: auto; display: block; opacity: 0; position: absolute; top: 0; left: 0; transition: opacity 0.5s ease;">
+        <!-- Hover Image (Winking Cat) -->
+        <img src="assets/craiyon_182412_shows_cat_winking.png" 
+             alt="Winking Cat" 
+             class="hover-image"
+             style="width: 100%; height: auto; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s ease;">
+    </div>
 </a>
 
 <script>
@@ -225,6 +228,7 @@
         hoverImage.style.opacity = '0'; // Hide the winking cat image
     });
 </script>
+
 
 
 <p class="footer-legal">
