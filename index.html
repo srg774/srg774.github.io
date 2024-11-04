@@ -148,7 +148,36 @@
         </div>
     </div>
 <footer>
-    <h4 style="color: #ffffff;">A selection of songs I'm <br> currently listening to:</h4>
+    <style>
+    .heart {
+        width: 30px; /* Adjust size as needed */
+        height: 30px; /* Adjust size as needed */
+        background-image: url('assets/image_transparent_Craiyon (8).png'); /* Update this to the correct path */
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        margin-right: 8px; /* Space between heart and text */
+        animation: pulsate 0.8s infinite; /* Adjust duration for speed */
+    }
+
+    @keyframes pulsate {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.2); /* Scale to 120% */
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+</style>
+
+<h4 style="color: #ffffff; display: inline-flex; align-items: center;">
+    <span class="heart"></span>
+    A selection of songs I'm <br> currently listening to:
+</h4>
+
     <br>
     <a href="https://music.youtube.com/playlist?list=PLnVV3fz055QLIp587FjL4cozBmz7Yucwv&si=7x2LhuHvB_xc-Ows" target="_blank" class="music-card">
         <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" alt="Techno Vibes Playlist Thumbnail" style="width: 277px; height: auto;">
