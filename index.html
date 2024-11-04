@@ -192,13 +192,15 @@
     <span class="heart"></span>
     Currently listening to:
 </h4>
-<div class="music-card-wrapper" style="display: flex; flex-direction: column; align-items: center;">
+<!-- Wrapper for the Music Card and Legal Notice -->
+<div class="music-card-wrapper" style="display: flex; flex-direction: column; align-items: center; max-width: 277px;">
 
     <!-- Music Card Link with Images -->
     <a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" 
-       target="_blank" class="music-card" style="display: flex; justify-content: center; position: relative; cursor: pointer; text-decoration: none; max-width: 277px;">
+       target="_blank" class="music-card" style="display: block; position: relative; cursor: pointer; text-decoration: none; width: 100%;">
 
-        <div class="image-container" style="position: relative; width: 100%; padding-bottom: 15px;">
+        <!-- Image Container -->
+        <div class="image-container" style="position: relative; width: 100%; padding-bottom: 10px;">
             <!-- Normal Image (Cat with Headphones) -->
             <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" 
                  alt="Techno Vibes Playlist Thumbnail" 
@@ -214,12 +216,11 @@
     </a>
 
     <!-- Legal Notice Positioned Below the Music Card -->
-    <div class="footer-legal" style="text-align: center; color: #cccccc; font-size: 12px; margin-top: 10px; max-width: 277px;">
+    <div class="footer-legal" style="text-align: center; color: #cccccc; font-size: 12px; margin-top: 15px;">
         <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">
             © srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.
         </a>
     </div>
-
 </div>
 
 <script>
@@ -239,6 +240,7 @@
         hoverImage.style.opacity = '0'; // Hide the winking cat image
     });
 </script>
+
 
 
     <script src="script.js"></script>
