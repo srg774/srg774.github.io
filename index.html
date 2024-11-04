@@ -199,11 +199,22 @@
 </a>
 
 <style>
+    .music-card {
+        display: inline-block; /* Ensures the link behaves like a block element */
+        position: relative; /* Needed for absolute positioning of images */
+    }
+
+    /* Hover effect for images */
     .music-card:hover .hover-image {
         opacity: 1; /* Show the winking cat on hover */
     }
     .music-card:hover .normal-image {
         opacity: 0; /* Hide the normal image on hover */
+    }
+
+    /* Ensure no gaps are left when transitioning */
+    img {
+        display: block; /* Prevents any unwanted space under the image */
     }
 </style>
 
