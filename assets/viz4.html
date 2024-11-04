@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Music Visualizer</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background setup */
+    body {
+      background: #000;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      perspective: 1000px;
+    }
+
+    /* Main container for shapes */
+    .visualizer-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    /* Pulsing circles */
+    .circle {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: rgba(0, 255, 255, 0.7);
+      animation: pulse 1s ease-in-out infinite;
+      mix-blend-mode: screen;
+    }
+
+    /* Wavy lines */
+    .wave-line {
+      position: absolute;
+      width: 200px;
+      height: 2px;
+      background: rgba(255, 0, 255, 0.6);
+      animation: waveMove 5s linear infinite;
+      transform-origin: center;
+    }
+
+    /* Expanding rings */
+    .ring {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 2px solid rgba(0, 255, 153, 0.8);
+      border-radius: 50%;
+      animation: expand 2s ease-in-out infinite;
+    }
+
+    /* Circle pulsing animation */
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+        opacity: 0.5;
+      }
+      50% {
+        transform: scale(2.5);
+        opacity: 1;
+      }
+    }
+
+    /* Wave movement animation */
+    @keyframes waveMove {
+      0% {
+        transform: translateX(-100vw) rotate(0deg);
+      }
+      100% {
+        transform: translateX(100vw) rotate(360deg);
+      }
+    }
+
+    /* Ring expansion animation */
+    @keyframes expand {
+      0% {
+        transform: scale(0.5);
+        opacity: 0.7;
+      }
+      100% {
+        transform: scale(3);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container for the visualizer elements -->
+  <div class="visualizer-container"></div>
+
+  <script>
+    const container = document.querySelector('.visualizer-container');
+
+    // Function to create pulsing circles randomly
+    function createCircle() {
+      const circle = document.createElement('div');
+      circle.classList.add('circle');
+      const size = Math.random() * 40 + 10;
+      circle.style.width = `${size}px`;
+      circle.style.height = `${size}px`;
+      circle.style.top = `${Math.random() * 100}vh`;
+      circle.style.left = `${Math.random() * 100}vw`;
+      circle.style.animationDuration = `${Math.random() * 2 + 1}s`;
+      container.appendChild(circle);
+
+      setTimeout(() => circle.remove(), 3000);
+    }
+
+    // Function to create moving wave lines
+    function createWaveLine() {
+      const wave = document.createElement('div');
+      wave.classList.add('wave-line');
+      wave.style.top = `${Math.random() * 100}vh`;
+      wave.style.left = `${Math.random() * 100}vw`;
+      wave.style.animationDuration = `${Math.random() * 3 + 2}s`;
+      wave.style.transform = `rotate(${Math.random() * 360}deg)`;
+      container.appendChild(wave);
+
+      setTimeout(() => wave.remove(), 5000);
+    }
+
+    // Function to create expanding rings randomly
+    function createRing() {
+      const ring = document.createElement('div');
+      ring.classList.add('ring');
+      const size = Math.random() * 80 + 20;
+      ring.style.width = `${size}px`;
+      ring.style.height = `${size}px`;
+      ring.style.top = `${Math.random() * 100}vh`;
+      ring.style.left = `${Math.random() * 100}vw`;
+      ring.style.animationDuration = `${Math.random() * 2 + 1}s`;
+      container.appendChild(ring);
+
+      setTimeout(() => ring.remove(), 4000);
+    }
+
+    // Generate elements at intervals to simulate visualizer effect
+    setInterval(createCircle, 200);
+    setInterval(createWaveLine, 700);
+    setInterval(createRing, 500);
+  </script>
+
+</body>
+</html>
