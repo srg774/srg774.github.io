@@ -198,31 +198,34 @@
     <!-- Normal Image (Cat with Headphones) -->
     <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" 
          alt="Techno Vibes Playlist Thumbnail" 
+         class="normal-image"
          style="width: 100%; max-width: 277px; height: auto; display: block; transition: opacity 0.5s ease;">
 
     <!-- Hover Image (Winking Cat) -->
     <img src="assets/craiyon_182412_shows_cat_winking.png" 
          alt="Winking Cat" 
-         style="position: absolute; top: 0; left: 0; width: 100%; max-width: 277px; height: auto; opacity: 0; transition: opacity 0.5s ease;">
+         class="hover-image"
+         style="width: 100%; max-width: 277px; height: auto; display: block; opacity: 0; position: absolute; top: 0; left: 0; transition: opacity 0.5s ease;">
 </a>
 
 <script>
     // JavaScript to handle the hover effect
     const musicCard = document.querySelector('.music-card');
-    const normalImage = musicCard.children[0];
-    const hoverImage = musicCard.children[1];
+    const normalImage = musicCard.querySelector('.normal-image');
+    const hoverImage = musicCard.querySelector('.hover-image');
 
-    // Hover effect to swap opacity with smooth transition
+    // Hover effect to swap images smoothly
     musicCard.addEventListener('mouseenter', () => {
-        normalImage.style.opacity = '0'; // Hide normal image
-        hoverImage.style.opacity = '1'; // Show hover image
+        normalImage.style.opacity = '0'; // Hide the original cat image
+        hoverImage.style.opacity = '1'; // Show the winking cat image in the same position
     });
 
     musicCard.addEventListener('mouseleave', () => {
-        normalImage.style.opacity = '1'; // Show normal image
-        hoverImage.style.opacity = '0'; // Hide hover image
+        normalImage.style.opacity = '1'; // Show the original cat image
+        hoverImage.style.opacity = '0'; // Hide the winking cat image
     });
 </script>
+
 
 <p class="footer-legal">
     <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
