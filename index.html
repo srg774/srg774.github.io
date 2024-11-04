@@ -192,37 +192,46 @@
     Currently listening to:
 </h4>
 
-<a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" target="_blank" class="music-card" style="position: relative; display: inline-block;">
+<div class="music-card">
     <!-- Normal Image -->
-    <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" alt="Techno Vibes Playlist Thumbnail" class="normal-image" style="width: 277px; height: auto;">
+    <img src="Screenshot 2024-11-04 18.12.46.png" alt="Normal Cat" class="normal-image">
     
     <!-- Hover Image (Winking Cat) -->
-    <img src="https://example.com/path/to/your/winking_cat_image.png" alt="Winking Cat" class="hover-image" style="width: 277px; height: auto; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.3s ease;">
-</a>
+    <img src="craiyon_182412_shows_cat_winking.png" alt="Winking Cat" class="hover-image" style="position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.3s ease;">
+</div>
 
 <style>
     .music-card {
-        position: relative; /* Needed for absolute positioning of images */
-        display: inline-block; /* Keeps the link compact */
+        position: relative;
+        display: inline-block;
     }
 
-    /* Hover effect */
+    .normal-image {
+        width: 277px;
+        height: auto;
+        display: block;
+    }
+
+    .hover-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 277px;
+        height: auto;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
     .music-card:hover .hover-image {
-        opacity: 1; /* Show the winking cat on hover */
-    }
-    .music-card:hover .normal-image {
-        opacity: 0; /* Hide the normal image on hover */
+        opacity: 1;
     }
 
-    /* Prevents gaps under images */
-    img {
-        display: block; /* Prevents any unwanted space under the image */
+    .music-card:hover .normal-image {
+        opacity: 0;
     }
 </style>
 
-
-
-
+    
 <p class="footer-legal">
     <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
 </p>
