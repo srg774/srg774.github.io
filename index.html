@@ -196,6 +196,24 @@
 <a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" target="_blank" class="music-card">
     <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" alt="Techno Vibes Playlist Thumbnail" style="width: 277px; height: auto;">
 </a>
+
+<style>
+    .music-card {
+        display: inline-block; /* Allows the card to wrap around the image */
+        overflow: hidden; /* Prevents overflow of the image */
+        position: relative; /* Positioning context for overlay if needed */
+    }
+
+    .music-card img {
+        transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+        display: block; /* Remove bottom space in images */
+    }
+
+    .music-card:hover img {
+        filter: blur(4px); /* Blur effect on hover */
+    }
+</style>
+
 <p class="footer-legal">
     <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
 </p>
