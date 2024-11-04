@@ -159,6 +159,8 @@
                 <a href="https://soundcloud.com/monophonicspace" title="monophonicspace" target="_blank" style="color: #cccccc; text-decoration: none;">monophonicspace</a> · 
                 <a href="https://soundcloud.com/monophonicspace/monophonic-invisible-touch" title="Monophonic - Invisible Touch" target="_blank" style="color: #cccccc; text-decoration: none;">Monophonic - Invisible Touch</a>
             </div>
+        </div>
+    </div>
 <footer>
     <style>
     .heart {
@@ -183,51 +185,6 @@
             transform: scale(1);
         }
     }
-<style>
-    /* Make sure the legal notice stays at the bottom */
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        margin: 0;
-    }
-
-    /* Container to hold the main content and push the footer to the bottom */
-    .content {
-        flex: 1; /* Ensures that this section takes up the available space */
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-
-    /* Adjust the footer legal notice styling */
-    .footer-legal {
-        text-align: center;
-        color: #cccccc;
-        font-size: 12px;
-        margin-top: 10px;
-        padding-bottom: 20px; /* Give it some padding from the bottom */
-        max-width: 277px;
-    }
-
-    /* Move the cat image up from the bottom */
-    .image-container {
-        position: relative;
-        width: 100%;
-        max-width: 277px;
-        margin-bottom: 30px; /* Moves the cat image up */
-    }
-
-    /* Style for hover images */
-    .normal-image, .hover-image {
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: opacity 0.5s ease;
-    }
 </style>
 
 <h4 style="color: #ffffff; display: inline-flex; align-items: center;">
@@ -235,49 +192,14 @@
     Currently listening to:
 </h4>
 
-<!-- Music Card Link with Images -->
-<a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" 
-   target="_blank" class="music-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; cursor: pointer; text-decoration: none;">
-
-    <div class="image-container" style="position: relative; width: 100%; max-width: 277px;">
-        <!-- Normal Image (Cat with Headphones) -->
-        <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" 
-             alt="Techno Vibes Playlist Thumbnail" 
-             class="normal-image"
-             style="width: 100%; height: auto; position: absolute; top: 0; left: 0; transition: opacity 0.5s ease;">
-
-        <!-- Hover Image (Winking Cat) -->
-        <img src="assets/craiyon_182412_shows_cat_winking.png" 
-             alt="Winking Cat" 
-             class="hover-image"
-             style="width: 100%; height: auto; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s ease;">
-    </div>
+    <br>
+<a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" target="_blank" class="music-card">
+    <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" alt="Techno Vibes Playlist Thumbnail" style="width: 277px; height: auto;">
 </a>
-
-<!-- Legal Notice Positioned Below the Music Card -->
-<div class="footer-legal" style="text-align: center; color: #cccccc; font-size: 12px; margin-top: 10px; max-width: 277px;">
-    <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">
-        © srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.
-    </a>
-</div>
-
-<script>
-    // JavaScript to handle the hover effect
-    const musicCard = document.querySelector('.music-card');
-    const normalImage = musicCard.querySelector('.normal-image');
-    const hoverImage = musicCard.querySelector('.hover-image');
-
-    // Hover effect to swap images smoothly
-    musicCard.addEventListener('mouseenter', () => {
-        normalImage.style.opacity = '0'; // Hide the original cat image
-        hoverImage.style.opacity = '1'; // Show the winking cat image in the same position
-    });
-
-    musicCard.addEventListener('mouseleave', () => {
-        normalImage.style.opacity = '1'; // Show the original cat image
-        hoverImage.style.opacity = '0'; // Hide the winking cat image
-    });
-</script>
+<p class="footer-legal">
+    <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
+</p>
+</footer>
 
     <script src="script.js"></script>
     <!-- Cookie Consent Banner -->
