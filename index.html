@@ -195,17 +195,18 @@
 <br>
 <a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" target="_blank" class="music-card" style="position: relative; display: inline-block;">
     <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" alt="Techno Vibes Playlist Thumbnail" class="normal-image" style="width: 277px; height: auto;">
-    <img src="assets/craiyon_182412_shows_cat_winking.png" alt="Winking Cat" class="hover-image" style="width: 277px; height: auto; position: absolute; top: 0; left: 0; display: none;">
+    <img src="assets/craiyon_182412_shows_cat_winking.png" alt="Winking Cat" class="hover-image" style="width: 277px; height: auto; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.3s ease;">
 </a>
 
 <style>
     .music-card:hover .hover-image {
-        display: block; /* Show the winking cat on hover */
+        opacity: 1; /* Show the winking cat on hover */
     }
     .music-card:hover .normal-image {
-        display: none; /* Hide the normal image on hover */
+        opacity: 0; /* Hide the normal image on hover */
     }
 </style>
+
 
 <p class="footer-legal">
     <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
