@@ -201,5 +201,25 @@
 
 
     <script src="script.js"></script>
+    <!-- Cookie Consent Banner -->
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #333; color: #fff; text-align: center; padding: 10px; z-index: 1000;">
+  This website uses cookies to improve your experience. By using this site, you agree to our use of cookies. 
+  <button onclick="acceptCookies()" style="margin-left: 10px; padding: 5px 10px; background: #555; color: #fff; border: none; cursor: pointer;">Got it!</button>
+</div>
+
+<!-- JavaScript for Cookie Consent -->
+<script>
+  // Check if consent has already been given
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
+
+  // Function to accept cookies and hide the banner
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
