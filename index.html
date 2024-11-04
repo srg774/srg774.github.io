@@ -194,17 +194,20 @@
 
 <br>
 <a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" target="_blank" class="music-card" style="position: relative; display: inline-block;">
+    <!-- Normal Image -->
     <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" alt="Techno Vibes Playlist Thumbnail" class="normal-image" style="width: 277px; height: auto;">
+    
+    <!-- Hover Image (Winking Cat) -->
     <img src="assets/craiyon_182412_shows_cat_winking.png" alt="Winking Cat" class="hover-image" style="width: 277px; height: auto; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.3s ease;">
 </a>
 
 <style>
     .music-card {
-        display: inline-block; /* Ensures the link behaves like a block element */
         position: relative; /* Needed for absolute positioning of images */
+        display: inline-block; /* Keeps the link compact */
     }
 
-    /* Hover effect for images */
+    /* Hover effect */
     .music-card:hover .hover-image {
         opacity: 1; /* Show the winking cat on hover */
     }
@@ -212,11 +215,12 @@
         opacity: 0; /* Hide the normal image on hover */
     }
 
-    /* Ensure no gaps are left when transitioning */
+    /* Prevents gaps under images */
     img {
         display: block; /* Prevents any unwanted space under the image */
     }
 </style>
+
 
 
 <p class="footer-legal">
