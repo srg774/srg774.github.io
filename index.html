@@ -204,7 +204,8 @@
     <!-- Hover Image (Winking Cat) -->
     <img src="assets/craiyon_182412_shows_cat_winking.png" 
          alt="Winking Cat" 
-         style="position: absolute; top: 0; left: 0; width: 100%; max-width: 277px; height: auto; opacity: 0; transition: opacity 0.5s ease;"> <!-- Increased duration to 0.5s for smoother effect -->
+         style="position: absolute; top: 0; left: 0; width: 100%; max-width: 277px; height: auto; opacity: 0; transition: opacity 0.5s ease;"> <!-- Smooth transition -->
+
 </a>
 
 <script>
@@ -215,15 +216,16 @@
 
     // Hover effect to swap opacity
     musicCard.addEventListener('mouseover', () => {
-        normalImage.style.opacity = '0';
-        hoverImage.style.opacity = '1';
+        normalImage.style.opacity = '0'; // Hide normal image
+        hoverImage.style.opacity = '1'; // Show hover image
     });
 
     musicCard.addEventListener('mouseout', () => {
-        normalImage.style.opacity = '1';
-        hoverImage.style.opacity = '0';
+        normalImage.style.opacity = '1'; // Show normal image
+        hoverImage.style.opacity = '0'; // Hide hover image
     });
 </script>
+
 
 
 <p class="footer-legal">
