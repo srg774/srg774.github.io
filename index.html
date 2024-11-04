@@ -159,8 +159,6 @@
                 <a href="https://soundcloud.com/monophonicspace" title="monophonicspace" target="_blank" style="color: #cccccc; text-decoration: none;">monophonicspace</a> · 
                 <a href="https://soundcloud.com/monophonicspace/monophonic-invisible-touch" title="Monophonic - Invisible Touch" target="_blank" style="color: #cccccc; text-decoration: none;">Monophonic - Invisible Touch</a>
             </div>
-        </div>
-    </div>
 <footer>
     <style>
     .heart {
@@ -232,75 +230,75 @@
     }
 </style>
 
-<body>
-    <div class="content">
-        <h4 style="color: #ffffff; display: inline-flex; align-items: center;">
-            <span class="heart"></span>
-            Currently listening to:
-        </h4>
+<h4 style="color: #ffffff; display: inline-flex; align-items: center;">
+    <span class="heart"></span>
+    Currently listening to:
+</h4>
 
-        <!-- Music Card Link with Images -->
-        <a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" 
-           target="_blank" class="music-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; cursor: pointer; text-decoration: none;">
+<!-- Music Card Link with Images -->
+<a href="https://music.youtube.com/playlist?list=PLAjZlXTEqljvIXtRe-pekG5vxxTSUsE2S&si=-KYeGvh49tz_xn2f" 
+   target="_blank" class="music-card" style="display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; cursor: pointer; text-decoration: none;">
 
-            <div class="image-container">
-                <!-- Normal Image (Cat with Headphones) -->
-                <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" 
-                     alt="Techno Vibes Playlist Thumbnail" 
-                     class="normal-image">
+    <div class="image-container" style="position: relative; width: 100%; max-width: 277px;">
+        <!-- Normal Image (Cat with Headphones) -->
+        <img src="https://raw.githubusercontent.com/srg774/srg774.github.io/main/craiyon_193530_Simple_faceless_cat_character_in_headphones_on_beige_background.png" 
+             alt="Techno Vibes Playlist Thumbnail" 
+             class="normal-image"
+             style="width: 100%; height: auto; position: absolute; top: 0; left: 0; transition: opacity 0.5s ease;">
 
-                <!-- Hover Image (Winking Cat) -->
-                <img src="assets/craiyon_182412_shows_cat_winking.png" 
-                     alt="Winking Cat" 
-                     class="hover-image"
-                     style="opacity: 0;">
-            </div>
-        </a>
+        <!-- Hover Image (Winking Cat) -->
+        <img src="assets/craiyon_182412_shows_cat_winking.png" 
+             alt="Winking Cat" 
+             class="hover-image"
+             style="width: 100%; height: auto; position: absolute; top: 0; left: 0; opacity: 0; transition: opacity 0.5s ease;">
     </div>
+</a>
 
-    <!-- Legal Notice Positioned Below the Content -->
-    <div class="footer-legal">
-        <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">
-            © srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.
-        </a>
-    </div>
+<!-- Legal Notice Positioned Below the Music Card -->
+<div class="footer-legal" style="text-align: center; color: #cccccc; font-size: 12px; margin-top: 10px; max-width: 277px;">
+    <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">
+        © srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.
+    </a>
+</div>
 
-    <script>
-        // JavaScript to handle the hover effect
-        const musicCard = document.querySelector('.music-card');
-        const normalImage = musicCard.querySelector('.normal-image');
-        const hoverImage = musicCard.querySelector('.hover-image');
+<script>
+    // JavaScript to handle the hover effect
+    const musicCard = document.querySelector('.music-card');
+    const normalImage = musicCard.querySelector('.normal-image');
+    const hoverImage = musicCard.querySelector('.hover-image');
 
-        // Hover effect to swap images smoothly
-        musicCard.addEventListener('mouseenter', () => {
-            normalImage.style.opacity = '0'; // Hide the original cat image
-            hoverImage.style.opacity = '1'; // Show the winking cat image in the same position
-        });
+    // Hover effect to swap images smoothly
+    musicCard.addEventListener('mouseenter', () => {
+        normalImage.style.opacity = '0'; // Hide the original cat image
+        hoverImage.style.opacity = '1'; // Show the winking cat image in the same position
+    });
 
-        musicCard.addEventListener('mouseleave', () => {
-            normalImage.style.opacity = '1'; // Show the original cat image
-            hoverImage.style.opacity = '0'; // Hide the winking cat image
-        });
-    </script>
+    musicCard.addEventListener('mouseleave', () => {
+        normalImage.style.opacity = '1'; // Show the original cat image
+        hoverImage.style.opacity = '0'; // Hide the winking cat image
+    });
+</script>
 
+    <script src="script.js"></script>
     <!-- Cookie Consent Banner -->
-    <div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #333; color: #fff; text-align: center; padding: 10px; z-index: 1000;">
-      This website uses cookies to improve your experience. By using this site, you agree to our use of cookies. 
-      <button onclick="acceptCookies()" style="margin-left: 10px; padding: 5px 10px; background: #555; color: #fff; border: none; cursor: pointer;">Got it!</button>
-    </div>
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #333; color: #fff; text-align: center; padding: 10px; z-index: 1000;">
+  This website uses cookies to improve your experience. By using this site, you agree to our use of cookies. 
+  <button onclick="acceptCookies()" style="margin-left: 10px; padding: 5px 10px; background: #555; color: #fff; border: none; cursor: pointer;">Got it!</button>
+</div>
 
-    <!-- JavaScript for Cookie Consent -->
-    <script>
-      // Check if consent has already been given
-      if (!localStorage.getItem('cookieConsent')) {
-        document.getElementById('cookie-banner').style.display = 'block';
-      }
+<!-- JavaScript for Cookie Consent -->
+<script>
+  // Check if consent has already been given
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
 
-      // Function to accept cookies and hide the banner
-      function acceptCookies() {
-        localStorage.setItem('cookieConsent', 'true');
-        document.getElementById('cookie-banner').style.display = 'none';
-      }
-    </script>
+  // Function to accept cookies and hide the banner
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
