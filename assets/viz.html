@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techno Visualizer</title>
+  <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Background styling */
+    body {
+      background: #111;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    /* Central pulsing circle */
+    .pulse-circle {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, #00ffcc, transparent 70%);
+      border-radius: 50%;
+      animation: pulse 1s infinite alternate;
+      filter: blur(10px);
+    }
+
+    /* Spinning grid of dots */
+    .dot-grid {
+      position: absolute;
+      width: 300px;
+      height: 300px;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(5, 1fr);
+      gap: 20px;
+      animation: spin 10s linear infinite;
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      background-color: #00ffcc;
+      border-radius: 50%;
+      animation: flicker 2s infinite ease-in-out alternate;
+    }
+
+    /* Animated bars */
+    .bars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .bar {
+      width: 5px;
+      height: 50px;
+      background-color: #ff0099;
+      animation: barPulse 1.5s infinite ease-in-out;
+      filter: blur(1px);
+    }
+    .bar:nth-child(even) {
+      animation-delay: 0.2s;
+    }
+    .bar:nth-child(odd) {
+      animation-delay: 0.4s;
+    }
+
+    /* Pulsating animation for the circle */
+    @keyframes pulse {
+      from {
+        transform: scale(1);
+        opacity: 0.7;
+      }
+      to {
+        transform: scale(1.5);
+        opacity: 1;
+      }
+    }
+
+    /* Flicker animation for dots */
+    @keyframes flicker {
+      0%, 100% {
+        opacity: 0.3;
+      }
+      50% {
+        opacity: 1;
+      }
+    }
+
+    /* Spin animation for the grid */
+    @keyframes spin {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Bar pulsing animation */
+    @keyframes barPulse {
+      0%, 100% {
+        height: 50px;
+      }
+      50% {
+        height: 120px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Pulsing circle in the center -->
+  <div class="pulse-circle"></div>
+
+  <!-- Spinning grid of dots -->
+  <div class="dot-grid">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+
+  <!-- Animated bars around the screen -->
+  <div class="bars">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+
+</body>
+</html>
