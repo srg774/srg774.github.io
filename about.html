@@ -6,13 +6,12 @@
     <title>About - Exploring Techno</title>
 
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QPFPCY85V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-5QPFPCY85V');
-</script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-5QPFPCY85V');
+    </script>
     
     <!-- Favicon Links for Various Devices -->
     <link rel="icon" type="image/png" sizes="512x512" href="android-chrome.png">
@@ -115,6 +114,15 @@
         <p>Your content for the second post goes here. You can share insights, updates, or personal anecdotes.</p>
     </div>
 
+    <!-- Existing Beginnings Post -->
+    <div class="post" style="text-align: center; margin: 20px auto; max-width: 600px; background-color: #1e1e1e; padding: 15px; border-radius: 5px;">
+        <h2 style="color: #00ffcc;">Beginnings</h2>
+        <p class="post-date" style="color: #cccccc; font-size: 0.9em; font-family: Arial, sans-serif;">03/11/2024</p>
+        <img src="assets/PXL_20241031_170435679.jpg" alt="Description of image" style="max-width: 100%; height: auto; border-radius: 5px; margin-bottom: 15px;">
+        <p>Hi, my name is Steven, thank-you for taking the time to check this out!</p>
+        <p>This photo was taken on a flight back from Zürich. I'm hoping to add some music worth posting soon.</p>
+    </div>
+
     <!-- Existing Music Visualiser Post -->
     <div class="post" style="text-align: center; margin: 20px auto; max-width: 600px; background-color: #1e1e1e; padding: 15px; border-radius: 5px;">
         <h2 style="color: #00ffcc;">My Music Visualiser</h2>
@@ -141,7 +149,7 @@
         const navbar = document.getElementById("navbar");
         const logoContainer = document.getElementById("logoContainer");
 
-        window.addEventListener("scroll", function() {
+        window.addEventListener("scroll", function () {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
             if (scrollTop > lastScrollTop) {
