@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Dynamic Neural Network Visualization</title>
+    <style>
+        body { margin: 0; overflow: hidden; background: #111; }
+        canvas { display: block; }
+    </style>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.130.1/build/three.min.js"></script>
+    <script>
+        // Set up scene, camera, and renderer
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Create particles
+        var particles = [];
+        var particleCount = 300;
+        var particleGeometry = new THREE.SphereGeometry(0.1, 16, 16);
+        var particleMaterial = new THREE.MeshBasicMaterial({
+            color: 0x00ff00,
+            wireframe: true,
+            transparent: true,
+            opacity: 0.6
+        });
+
+        // Add particles to the scene
+        for (var i = 0; i < particleCount; i++) {
+            var particle = new THREE.Mesh(particleGeometry, particleMaterial);
+            particle.position.set(Math.random() * 30 - 15, Math.random() * 30 - 15, Math.random() * 30 - 15);
+            scene.add(particle);
+            particles.push(particle);
+        }
+
+        // Line material
+        var lineMaterial = new THREE.LineBasicMaterial({ color: 0x00ff00, transparent: true, opacity: 0.2 });
+        var lineGeometry = new THREE.BufferGeometry();
+        var positions = [];
+
+        // Function to create random connections quickly
+        function createRandomConnections() {
+            positions = [];
+            particles.forEach((particle, index) => {
+                for (let i = 0; i < 3; i++) {  // Increase number of connections per particle
+                    var randomParticle = particles[Math.floor(Math.random() * particleCount)];
+                    positions.push(particle.position.x, particle.position.y, particle.position.z);
+                    positions.push(randomParticle.position.x, randomParticle.position.y, randomParticle.position.z);
+                }
+            });
+            lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+        }
+
+        // Create initial connections
+        createRandomConnections();
+        var lines = new THREE.LineSegments(lineGeometry, lineMaterial);
+        scene.add(lines);
+
+        // Camera position
+        camera.position.z = 30;
+
+        // Animate faster and more dynamically
+        var animate = function () {
+            requestAnimationFrame(animate);
+
+            // Add increased speed to particle movement for more dynamism
+            particles.forEach(particle => {
+                particle.position.x += (Math.random() - 0.5) * 0.6;  // Increase speed
+                particle.position.y += (Math.random() - 0.5) * 0.6;
+                particle.position.z += (Math.random() - 0.5) * 0.6;
+            });
+
+            // Dynamically reshuffle connections more frequently for a faster network reshaping
+            if (Math.random() < 0.1) {  // More frequent reshuffling
+                createRandomConnections();
+            }
+
+            lineGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+
+            // Rotate scene for dynamic view
+            scene.rotation.x += 0.005;  // Increase rotation speed
+            scene.rotation.y += 0.005;
+
+            renderer.render(scene, camera);
+        };
+
+        animate();
+
+        // Handle window resizing
+        window.addEventListener('resize', function () {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+        });
+    </script>
+</body>
+</html>
