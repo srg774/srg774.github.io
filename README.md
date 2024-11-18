@@ -11,3 +11,5 @@ Turns out, SoundCloud allows me to embed my own music, so I’ll go with that ap
 I’m sure I’ll be making plenty of tweaks, and I’m not entirely sure how well adding posts directly to the index will work long-term. But I’m excited to try it out and happy to break out of the Google Sites ecosystem, even though I appreciate its ease of use for quick project updates like this.
 
 Anyway, take a look and enjoy!
+
+https://srg774.github.io/index.html
