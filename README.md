@@ -1,6 +1,4 @@
-I’ve had a concept brewing in the background for a while. 
-
-I originally considered mirroring or simplifying this existing site but wanted to try building my own, as I felt somewhat constrained by Google Sites. 
+I’ve had a concept brewing in the background for a while, I felt somewhat constrained by Google Sites. 
 
 Fast forward to an article I stumbled across about a talented man from the UK (Nick Hayes- The Last DJ ) who produces minimalist, industrial techno in a very stripped-down style. I, too, have a love for techno and electronic music, and reading about his approach totally reignited my desire to try something similar—perhaps using a DAW-less setup or my existing Ableton laptop setup. Either way, the idea emerged to showcase this on my own website.
 
