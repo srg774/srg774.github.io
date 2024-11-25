@@ -1,4 +1,4 @@
-
+#Devleoping a Personal Music Website
 
 Though initially I tried adapting a full theme  (Dean Attali -Beautiful Jekyll), I found it better to simplify it to match my vision. The site’s design is minimal, with a basic animation for the logo that I liked, and it’s built around SoundCloud embeds and my playlists to showcase my own music and current musical influences.
 
