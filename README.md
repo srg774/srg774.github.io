@@ -1,8 +1,4 @@
-I’ve had a concept brewing in the background for a while, I felt somewhat constrained by Google Sites. 
 
-Fast forward to an article I stumbled across about a talented man from the UK (Nick Hayes- The Last DJ ) who produces minimalist, industrial techno in a very stripped-down style. I, too, have a love for techno and electronic music, and reading about his approach totally reignited my desire to try something similar—perhaps using a DAW-less setup or my existing Ableton laptop setup. Either way, the idea emerged to showcase this on my own website.
-
-So, after a few evenings, I had built a simple site from scratch, hosted on GitHub Pages. With the help of some code snippets, advice from ChatGPT, and a minimal theme reference from 2020, I managed to piece it together. 
 
 Though initially I tried adapting a full theme  (Dean Attali -Beautiful Jekyll), I found it better to simplify it to match my vision. The site’s design is minimal, with a basic animation for the logo that I liked, and it’s built around SoundCloud embeds and my playlists to showcase my own music and current musical influences.
 
