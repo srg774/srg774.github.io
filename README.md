@@ -1,5 +1,7 @@
 # Developing a Personal Music Website
 
+https://srg774.github.io/index.html
+
 Though initially I tried adapting a full theme  (Dean Attali -Beautiful Jekyll), I found it better to simplify it to match my vision. The site’s design is minimal, with a basic animation for the logo that I liked, and it’s built around SoundCloud embeds and my playlists to showcase my own music and current musical influences.
 
 Turns out, SoundCloud allows me to embed my own music, so I’ll go with that approach for now. Along the way, I learned countless details about building and tweaking the site. It may not be the most polished solution yet, but it has the essentials: pictures, posts, HTML animations, colors, and GitHub’s HTTPS support. 
@@ -8,5 +10,3 @@ I’m sure I’ll be making plenty of tweaks, and I’m not entirely sure how we
 
 Anyway, take a look and enjoy!
 
-
-https://srg774.github.io/index.html
