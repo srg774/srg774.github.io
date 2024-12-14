@@ -40,6 +40,12 @@ body {
     position: relative; /* Allows the logo to overlap the navbar */
     z-index: 999; /* Ensure the logo is above the navbar */
     transition: transform 0.3s, opacity 0.3s; /* Smooth transition for the logo */
+    
+    /* Enhancements */
+    border-radius: 20px 20px 0 0; /* Rounded top corners only */
+    background: linear-gradient(135deg, #ff7eb3, #ff758c); /* Gradient for a modern look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    padding: 15px; /* Inner spacing for a balanced look */
 }
 
 .image-placeholder {
