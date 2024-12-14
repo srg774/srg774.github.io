@@ -40,6 +40,7 @@ body {
     position: relative; /* Allows the logo to overlap the navbar */
     z-index: 999; /* Ensure the logo is above the navbar */
     transition: transform 0.3s, opacity 0.3s; /* Smooth transition for the logo */
+}
 
 .image-placeholder {
     width: 150px; /* Size of the logo */
