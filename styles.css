@@ -40,12 +40,13 @@ body {
     position: relative; /* Allows the logo to overlap the navbar */
     z-index: 999; /* Ensure the logo is above the navbar */
     transition: transform 0.3s, opacity 0.3s; /* Smooth transition for the logo */
-    
-    /* Shape and fading effect */
-    border-radius: 20px; /* Rounded square shape */
-    mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
-    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0) 100%);
+    width: 150px; /* Ensure square dimensions */
+    height: 150px; /* Ensure square dimensions */
+    border-radius: 15px; /* Rounded edges, adjust as needed */
+    background: rgba(0, 0, 0, 0.2); /* Semi-opaque edges */
+    overflow: hidden; /* Clips content inside the border radius */
 }
+
 
 
 .image-placeholder {
