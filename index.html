@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,22 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exploring Techno</title>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5QPFPCY85V"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-        gtag('config', 'G-5QPFPCY85V');
-    </script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5QPFPCY85V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-    <!-- Favicon Links -->
-    <link rel="icon" type="image/jpeg" sizes="512x512" href="assets/Gemini_Generated_Image_npe498npe498npe4.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="192x192" href="assets/Gemini_Generated_Image_npe498npe498npe4.jpeg">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/Gemini_Generated_Image_npe498npe498npe4.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="32x32" href="assets/Gemini_Generated_Image_npe498npe498npe4.jpeg">
-    <link rel="icon" type="image/jpeg" sizes="16x16" href="assets/Gemini_Generated_Image_npe498npe498npe4.jpeg">
+  gtag('config', 'G-5QPFPCY85V');
+</script>
 
+    <!-- Favicon Links for Various Devices -->
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome1.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome1.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="android-chrome.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+
+<head>
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Exploring Techno">
     <meta property="og:description" content="Showcasing my original techno tracks">
@@ -28,17 +31,24 @@
     <meta property="og:url" content="https://yourdomain.com">
     <meta property="og:type" content="website">
 
-    <!-- Elder Futhark Font -->
-    <style>
-        @font-face {
-            font-family: 'ElderFuthark';
-            src: url('path-to-your-elder-futhark-font-file.woff2') format('woff2'),
-                 url('path-to-your-elder-futhark-font-file.woff') format('woff');
-            font-weight: normal;
-            font-style: normal;
-        }
+    <!-- Favicon Links for Various Devices -->
+    <link rel="icon" type="image/png" sizes="512x512" href="android-chrome1.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="android-chrome1.png">
+    <link rel="apple-touch-icon" sizes="512x512" href="android-chrome1.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+</head>
 
-        /* General Styling */
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS Link -->
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        /* Main Page Styling */
         body {
             font-family: Arial, sans-serif;
             background-color: #121212;
@@ -46,7 +56,7 @@
             margin: 0;
             padding: 0;
         }
-        .navbar {
+        .navbar 
             background-color: #1a1a1a;
             padding: 15px;
             position: fixed;
@@ -76,10 +86,10 @@
             margin-top: 20px;
         }
         h1 {
-            font-family: 'ElderFuthark', sans-serif;
+            font-family: 'Orbitron', sans-serif;
             font-size: 4em;
-            color: white;
-            text-shadow: 0 0 15px rgba(0, 255, 0, 0.8);
+            color: #00ffcc;
+            text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);
             margin: 0;
         }
         footer {
@@ -87,6 +97,7 @@
             padding: 20px;
             text-align: center;
         }
+        /* SoundCloud Embeds */
         .soundcloud-container {
             display: flex;
             flex-direction: column;
@@ -103,115 +114,106 @@
             height: 166px;
             border: none;
         }
+        .soundcloud-embed div {
+            font-size: 10px; 
+            color: #cccccc; 
+            text-align: center;
+        }
+        .music-card img {
+            width: 277px;
+            height: auto;
+        }
         .footer-legal {
             font-size: 10px;
             color: #cccccc;
             margin-top: 10px;
         }
-        /* Cookie Banner */
-        #cookie-banner {
-            display: none;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px;
-            z-index: 1000;
-            animation: slideUp 0.5s ease-out;
-        }
-        @keyframes slideUp {
-            from {
-                transform: translateY(100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-        #cookie-banner button {
-            margin-left: 10px;
-            padding: 5px 10px;
-            background: #555;
-            color: #fff;
-            border: none;
-            cursor: pointer;
-        }
     </style>
 </head>
 <body>
-    <!-- Navbar -->
+ 
     <div class="navbar" id="navbar">
-        <a href="about.html" target="_blank" style="font-family: 'Orbitron', sans-serif; font-size: 1em; color: #00ffcc; text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);">About</a>
-    </div>
+    <a href="about.html" target="_blank" style="font-family: 'Orbitron', sans-serif; font-size: 1em; color: #00ffcc; text-shadow: 0 0 10px rgba(0, 255, 204, 0.8);">About</a>
+</div>
 
-    <!-- Logo Section -->
     <div class="logo-container" id="logoContainer">
         <img src="eef.jpg" alt="Logo" class="image-placeholder" />
     </div>
 
-    <!-- Content Section -->
-    <div class="content">
-        <h1>Exploring Techno</h1>
-        <br><br>
-        <h2>Showcasing my original techno tracks.</h2>
-        <br><br>
-        <h6 style="margin: 0;">Please select "Listen in browser" if on mobile.</h6>
-        <br>
-    </div>
+   <div class="content">
+    <h1>Exploring Techno</h1>
+    <br><br>
+    <h2>Showcasing my original techno tracks.</h2>
+       <br>
+       <br>
+    <h6 style="margin: 0;">Please select "Listen in browser" if on mobile.</h5>
+    <br>
+</div>
 
-    <!-- SoundCloud Embeds -->
-    <div class="soundcloud-container">
-        <div class="soundcloud-embed">
-            <iframe 
-                scrolling="no" 
-                allow="autoplay" 
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1975470035&color=%234e3e4e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-            </iframe>
-            <div>
-                <a href="https://soundcloud.com/srg_774" title="srg774" target="_blank" style="color: #cccccc; text-decoration: none;">srg774</a> · 
-                <a href="https://soundcloud.com/srg_774/walk" title="walk_" target="_blank" style="color: #cccccc; text-decoration: none;">walk_</a>
-            </div>
+     <!-- SoundCloud embeds container -->
+<div class="soundcloud-container">
+    <!-- Updated SoundCloud Embed -->
+    <div class="soundcloud-embed">
+        <iframe 
+            scrolling="no" 
+            allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1975470035&color=%234e3e4e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" 
+            width="100%" 
+            height="300">
+        </iframe>
+        <div>
+            <a href="https://soundcloud.com/srg_774" title="srg774" target="_blank" style="color: #cccccc; text-decoration: none;">srg774</a> · 
+            <a href="https://soundcloud.com/srg_774/walk" title="walk_" target="_blank" style="color: #cccccc; text-decoration: none;">walk_</a>
         </div>
     </div>
+</div>
 
-    <div class="soundcloud-container">
-        <div class="soundcloud-embed">
-            <iframe 
-                scrolling="no" 
-                allow="autoplay" 
-                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1976274263&color=%234e3e4e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true">
-            </iframe>
-            <div>
-                <a href="https://soundcloud.com/srg_774" title="srg774" target="_blank" style="color: #cccccc; text-decoration: none;">srg774</a> · 
-                <a href="https://soundcloud.com/srg_774/through" title="through" target="_blank" style="color: #cccccc; text-decoration: none;">through</a>
-            </div>
+    
+<!-- SoundCloud embeds container -->
+<div class="soundcloud-container">
+    <!-- SoundCloud Embed -->
+    <div class="soundcloud-embed">
+        <iframe 
+            scrolling="no" 
+            allow="autoplay" 
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1976274263&color=%234e3e4e&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true" 
+            width="100%" 
+            height="300">
+        </iframe>
+        <div>
+            <a href="https://soundcloud.com/srg_774" title="srg774" target="_blank" style="color: #cccccc; text-decoration: none;">srg774</a> · 
+            <a href="https://soundcloud.com/srg_774/through" title="through" target="_blank" style="color: #cccccc; text-decoration: none;">through</a>
         </div>
     </div>
+</div>
 
-    <!-- Footer -->
-    <footer>
-        <p class="footer-legal">
-            <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
-        </p>
-    </footer>
+<footer>
+    
+<p class="footer-legal">
+    <a href="http://example.com/legal" target="_blank" style="color: #cccccc; text-decoration: none;">© srg774 2024. All rights reserved. Unauthorized use, reproduction, or distribution of music and content is prohibited.</a>
+</p>
+</footer>
 
+    <script src="script.js"></script>
     <!-- Cookie Consent Banner -->
-    <div id="cookie-banner">
-        This website uses cookies to improve your experience. By using this site, you agree to our use of cookies. 
-        <button onclick="acceptCookies()">Got it!</button>
-    </div>
+<div id="cookie-banner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #333; color: #fff; text-align: center; padding: 10px; z-index: 1000;">
+  This website uses cookies to improve your experience. By using this site, you agree to our use of cookies. 
+  <button onclick="acceptCookies()" style="margin-left: 10px; padding: 5px 10px; background: #555; color: #fff; border: none; cursor: pointer;">Got it!</button>
+</div>
 
-    <script>
-        // Cookie Consent Logic
-        if (!localStorage.getItem('cookieConsent')) {
-            document.getElementById('cookie-banner').style.display = 'block';
-        }
+<!-- JavaScript for Cookie Consent -->
+<script>
+  // Check if consent has already been given
+  if (!localStorage.getItem('cookieConsent')) {
+    document.getElementById('cookie-banner').style.display = 'block';
+  }
 
-        function acceptCookies() {
-            localStorage.setItem('cookieConsent', 'true');
-            document.getElementById('cookie-banner').style.display = 'none';
-        }
-    </script>
+  // Function to accept cookies and hide the banner
+  function acceptCookies() {
+    localStorage.setItem('cookieConsent', 'true');
+    document.getElementById('cookie-banner').style.display = 'none';
+  }
+</script>
+
 </body>
 </html>
