@@ -67,28 +67,6 @@ body {
     margin: 0;
 }
 
-/* Flickering Text for "Techno" */
-.flicker {
-    font-family: 'Orbitron', sans-serif;
-    font-size: 50px; /* Size of the font */
-    color: #00ffcc; /* Green color */
-    animation: flicker 250ms ease-in-out infinite; /* Flickering animation */
-    letter-spacing: 1px; /* Slight spacing between letters */
-    font-weight: lighter; /* Thin lines */
-    text-transform: none; /* No capitalization */
-    margin: 0;
-}
-
-/* Flickering Animation */
-@keyframes flicker {
-    0% { opacity: 1; }
-    25% { opacity: 0.6; }
-    50% { opacity: 0.4; }
-    75% { opacity: 0.6; }
-    100% { opacity: 1; }
-}
-
-
 .content {
     text-align: center;
     padding: 20px; /* Added padding to avoid overlap */
